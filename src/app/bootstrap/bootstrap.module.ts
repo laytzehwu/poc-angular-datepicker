@@ -4,14 +4,18 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 
 import { BasicDatepickerComponent } from './basic-datepicker/basic-datepicker.component';
+import { PopUpCalendarComponent } from './pop-up-calendar/pop-up-calendar.component';
 
 @NgModule({
-  declarations: [BasicDatepickerComponent],
+  declarations: [BasicDatepickerComponent, PopUpCalendarComponent],
   imports: [
     CommonModule,
     NgbModule,
     FormsModule
   ],
-  exports: [BasicDatepickerComponent]
+  exports: [
+    BasicDatepickerComponent,
+    PopUpCalendarComponent
+  ]
 })
 export class BootstrapModule { }
