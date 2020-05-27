@@ -1,1 +1,13 @@
-<p>Basic Datepicker</p>
+<div>
+    <p>Basic Datepicker</p>
+    <ngb-datepicker #dp [(ngModel)]="model"></ngb-datepicker>
+    <hr/>
+    <div class="row">
+        <button class="btn btn-sm btn-outline-primary mr-2" (click)="selectToday()">Select today</button>
+    </div>
+    <div *ngIf="model" class="row">
+        Model:
+        <pre class="mr-2">{{ model | json }}</pre>
+    </div>
+</div>
+

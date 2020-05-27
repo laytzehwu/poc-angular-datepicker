@@ -10,9 +10,14 @@ export class BasicDatepickerComponent implements OnInit {
 
   model: NgbDateStruct;
 
-  constructor(private calender: NgbCalendar) { }
+  constructor(private calendar: NgbCalendar) { }
 
   ngOnInit(): void {
+  }
+
+  selectToday() {
+    this.model = this.calendar.getToday();
+    console.log('Hey, select today!', this.model);
   }
 
 }
